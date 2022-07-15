@@ -1,0 +1,537 @@
+/* GERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #e5e5e5;
+    font-family: 'Roboto', sans-serif;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* 1 - Topo */
+
+.topo {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.barra {
+    width: 935px;
+    height: 54px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    font-size: 22px;
+    display: flex;
+}
+
+.logo div {
+    height: 22px;
+    width: 1px;
+    background-color: #dbdbdb;
+    margin: 0 10px;
+}
+
+.pesquisa{
+    width: 215px;
+    height: 28px;
+    background-color: #fafafa;
+    color: #979797;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menus{
+    width: 148px;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pesquisa:hover{
+    cursor: text;
+}
+
+.logo ion-icon:hover, .logo img:hover, .menus ion-icon:hover {
+    cursor: pointer;
+}
+
+/* 2 - Conteúdo */
+
+.conteudo {
+    margin-top: 88px;
+    width: 935px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 2.1 - FEED */
+
+.feed{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 2.1.1 - STORIES */
+
+.stories {
+    width: 614px;
+    height: 118px;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    padding-left: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+}
+
+.story {
+    height: 86px;
+    width: 66px;
+    min-width: 66px;
+    margin: 0 7px;
+    position: relative;
+}
+
+.story img:nth-child(1) {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.story img:nth-child(2) {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.story p {
+    width: 100%;
+    margin-top: 70px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.botao {
+    position: absolute;
+    top: 43px;
+    right: 5px;
+    color:#ffffff;
+    font-size: 32px;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.story img:hover, .botao:hover {
+    cursor: pointer;
+}
+
+/* 2.1.2 - POSTS */
+
+.posts{
+    margin-top: 24px;
+    width: 100%;
+}
+
+.post{
+    width: 614px;
+    height: auto;
+    background-color: #ffffff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-topo{
+    height: 61px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 17px;
+    color: #262626;
+}
+
+.post-topo div {
+    display: flex;
+    align-items: center;
+}
+
+.post-topo h1 {
+    font-size: 14px;
+    font-weight: medium;
+    margin-left: 15px;
+}
+
+.post-topo img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.post-foto, .post-video {
+    height: auto;
+    width: 100%;
+}
+
+.post-foto img {
+    width: 100%;
+    height: 100%;
+}
+
+.post-video video{
+    width: 100%;
+    height: 100%;
+}
+
+.post-botoes{
+    height: 38px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-top: 10px;
+}
+
+.post-botoes img {
+    height: 22px;
+}
+
+.post-botoes div {
+    font-size: 22px;
+    width: 93px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.post-curtidas{
+    height: 38px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.post-curtidas img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.post-curtidas p {
+    margin-left: 5px;
+}
+
+.post-comentarios{
+    width: 100%;
+    height: auto;
+    border-top: 1px solid #dbdbdb;
+    padding-top: 20px;
+}
+
+.post-comentarios div{
+    display: flex;
+    align-items: center;
+}
+
+.post-comentarios > div{
+    justify-content: space-between;
+    padding: 0 15px;
+    margin-bottom: 10px;
+}
+
+.post-comentarios input{
+    width: 100%;
+    height: 30px;
+    background-color: #fafafa;
+    color: #979797;
+    border: 1px solid #dbdbdb;
+}
+
+.post-comentarios button {
+    width: 100px;
+    height: 30px;
+    color: #B2DFFC;
+    font-weight: 500;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+}
+
+.post-comentarios button:hover{
+    transition: color 300ms;
+    color: #0095F6;
+    cursor: pointer;
+}
+
+.post-comentarios img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.post-comentarios h1 {
+    margin-left: 5px;
+    font-weight: 700;
+}
+
+.post-comentarios h2 {
+    color: #8e8e8e;
+}
+
+.post-comentarios p {
+    margin-left: 5px;
+}
+
+.post img:hover, .post h1:hover, .post strong:hover, .post ion-icon:hover, .post-comentarios h2:hover{
+    cursor: pointer;
+}
+
+/* 2.2 - Barra Lateral */
+
+.container {
+    height: auto;
+    width: 293px;
+}
+
+.barra-lateral {
+    width: 293px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+}
+
+.perfil{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.perfil img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.perfil h1{
+    margin-left: 17px;
+    font-size: 14px;
+    color: #262626;
+    font-weight: 500;
+}
+
+.perfil h2{
+    margin-left: 17px;
+    font-size: 14px;
+    color: #8e8e8e;
+    font-weight:300;
+    margin-top: 5px;
+}
+
+.sugestao{
+    height: 280px;
+    width: 100%;
+}
+
+.sugestao-topo {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.sugestao-topo h1 {
+    color: #8e8e8e;
+}
+
+.sugestao-topo h2 {
+    color: #262626;
+}
+
+.sugestao-linha {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sugestao-linha > div{
+    display: flex;
+    align-items: center;
+}
+
+.sugestao-linha img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.sugestao-linha h1{
+    margin-left: 10px;
+    font-size: 14px;
+    color: #262626;
+    font-weight: 500;
+}
+
+.sugestao-linha h2{
+    margin-left: 10px;
+    margin-top: 5px;
+    font-size: 12px;
+    color:#8e8e8e;
+    font-weight: 300;
+}
+
+.sugestao-linha p{
+    font-size: 12px;
+    font-weight: 500;
+    color: #139EF2
+}
+
+.info{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: #c7c7c7;
+    font-size: 11px;
+}
+
+.barra-lateral img:hover, .barra-lateral h1:hover, .barra-lateral h2:hover, .barra-lateral p:hover{
+    cursor: pointer;
+}
+
+.mobile{
+    display: none;
+}
+
+@media (max-width: 935px) {
+
+    .container{
+        display: none;
+    }
+
+    .barra{
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .conteudo{
+        width: 100%;
+    }
+
+    .conteudo{
+        justify-content: center;
+    }
+}
+
+@media (max-width: 614px) {
+
+    /* Topo */
+
+    .desktop{
+        display: none;
+    }
+    
+    .mobile{
+        display:flex;
+    }
+
+    .barra{
+        width: 100%;
+        font-size: 22px;
+        align-items: center;
+    }
+
+    .conteudo {
+        width: 100%;
+        margin-top: 72px;
+    }
+
+    .posts {
+        width: 100%;
+        margin-top: 18px;
+    }
+
+    /* Feed */
+    
+    .feed, .stories {
+        width: 100%;
+    }
+
+    .stories{
+        background-color: transparent;
+        border: none;
+        height: auto;
+    }
+
+    .botao{
+        display: none;
+    }
+
+    .post{
+        width: 100%;
+        height: auto;
+    }
+
+    .base {
+        height: 54px;
+        width: 100%;
+        padding: 0 19px;
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 22px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .base ion-icon:hover{
+        cursor: pointer;
+    }
+}
