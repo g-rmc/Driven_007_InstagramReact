@@ -9,7 +9,8 @@ export default function Sidebar() {
                     {img:'./assets/img/C_WarnerBros.png', user:'warner_bros', status:'Segue você'},
                     {img:'./assets/img/D_LucasFilm.png', user:'luck_imyourfather', status:'Segue você'},
                     {img:'./assets/img/E_Disney.png', user:'wdw42', status:'Segue você'},
-                    {img:'./assets/img/F_Universal.jpg', user:'universalmovies', status:'Segue você'},];
+                    {img:'./assets/img/F_Universal.jpg', user:'universalmovies', status:'Segue você'}
+    ];
 
     return (
 

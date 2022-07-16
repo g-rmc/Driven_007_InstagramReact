@@ -1,56 +1,22 @@
+import Story from './Components/Story';
+
 export default function Stories() {
+
+    const stories = [   {img:'./assets/img/1_Hermione.jpg', user:'Hermione'},
+                        {img:'./assets/img/2_Mickey.jpg', user:'Mickey'},
+                        {img:'./assets/img/3_Shrek.jpg', user:'Shrek'},
+                        {img:'./assets/img/4_Dory.jpg', user:'Dory'},
+                        {img:'./assets/img/5_JackSkellington.jpg', user:'Jack'},
+                        {img:'./assets/img/6_Malevola.jpg', user:'Malévola'},
+                        {img:'./assets/img/7_Stitch.jpg', user:'Stitch'},
+                        {img:'./assets/img/8_BnL.jpg', user:'BnL'}
+    ];
 
     return (
 
         <div class="stories">
 
-            <div class="story">
-                <img src="./assets/img/stories_background.jpg" />
-                <img src="./assets/img/1_Hermione.jpg" />
-                <p>Hermione</p>
-            </div>
-
-            <div class="story">
-                <img src="./assets/img/stories_background.jpg" />
-                <img src="./assets/img/2_Mickey.jpg" />
-                <p>Mickey</p>
-            </div>
-
-            <div class="story">
-                <img src="./assets/img/stories_background.jpg" />
-                <img src="./assets/img/3_Shrek.jpg" />
-                <p>Shrek</p>
-            </div>
-
-            <div class="story">
-                <img src="./assets/img/stories_background.jpg" />
-                <img src="./assets/img/4_Dory.jpg" />
-                <p>Dory</p>
-            </div>
-
-            <div class="story">
-                <img src="./assets/img/stories_background.jpg" />
-                <img src="./assets/img/5_JackSkellington.jpg" />
-                <p>Jack</p>
-            </div>
-
-            <div class="story">
-                <img src="./assets/img/stories_background.jpg" />
-                <img src="./assets/img/6_Malevola.jpg" />
-                <p>Malévola</p>
-            </div>
-
-            <div class="story">
-                <img src="./assets/img/stories_background.jpg" />
-                <img src="./assets/img/7_Stitch.jpg" />
-                <p>Stitch</p>
-            </div>
-
-            <div class="story">
-                <img src="./assets/img/stories_background.jpg" />
-                <img src="./assets/img/8_BnL.jpg" />
-                <p>BnL</p>
-            </div>
+            {stories.map(Story)}
 
             <div class="botao">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
