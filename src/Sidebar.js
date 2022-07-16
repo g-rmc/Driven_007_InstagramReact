@@ -1,11 +1,8 @@
-import Perfil from "./Components/Perfil";
-import SugestaoLinha from "./Components/SugestaoLinha";
-
 export default function Sidebar() {
 
-    const perfil =  {img:'./assets/img/A_Pixar.jpg', user:'pixar_real.oficial', name:'Pixar'};
+    const perfil =[ {img:'./assets/img/A_Pixar.jpg', user:'pixar_real.oficial', name:'Pixar'}];
     
-    const itens = [ {img:'./assets/img/B_Marvel.jpg', user:'marvete322', status:'Segue você'},
+    const itens =[  {img:'./assets/img/B_Marvel.jpg', user:'marvete322', status:'Segue você'},
                     {img:'./assets/img/C_WarnerBros.png', user:'warner_bros', status:'Segue você'},
                     {img:'./assets/img/D_LucasFilm.png', user:'luck_imyourfather', status:'Segue você'},
                     {img:'./assets/img/E_Disney.png', user:'wdw42', status:'Segue você'},
@@ -18,7 +15,15 @@ export default function Sidebar() {
 
             <div class="barra-lateral">
 
-                {Perfil(perfil)}
+                {perfil.map(props => (
+                    <div class="perfil">
+                        <img src={props.img} alt="" />
+                        <div>
+                            <h1>{props.user}</h1>
+                            <h2>{props.name}</h2>
+                        </div>
+                    </div>
+                ))}
 
                 <div class="sugestao">
 
@@ -27,7 +32,18 @@ export default function Sidebar() {
                         <h2>Ver tudo</h2>
                     </div>
 
-                    {itens.map(SugestaoLinha)}
+                    {itens.map(props => (
+                        <div class="sugestao-linha">
+                            <div>
+                                <img src={props.img} alt="" />
+                                <div>
+                                    <h1>{props.user}</h1>
+                                    <h2>{props.status}</h2>
+                                </div>
+                            </div>
+                            <p>Seguir</p>
+                        </div>
+                    ))}
 
                 </div>
 
@@ -39,9 +55,7 @@ export default function Sidebar() {
                         © 2021 INSTAGRAM DO FACEBOOK
                     </p>
                 </div>
-
             </div>
-
         </div>
     )
 }

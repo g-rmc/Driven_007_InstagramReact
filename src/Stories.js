@@ -1,5 +1,3 @@
-import Story from './Components/Story';
-
 export default function Stories() {
 
     const stories = [   {img:'./assets/img/1_Hermione.jpg', user:'Hermione'},
@@ -16,7 +14,13 @@ export default function Stories() {
 
         <div class="stories">
 
-            {stories.map(Story)}
+            {stories.map(props => (
+                <div class="story">
+                    <img src="./assets/img/stories_background.jpg" />
+                    <img src={props.img} />
+                    <p>{props.user}</p>
+                </div>
+            ))}
 
             <div class="botao">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
