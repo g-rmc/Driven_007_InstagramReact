@@ -13,7 +13,7 @@ export default function Head() {
                 </div>
 
                 <div class="pesquisa">
-                    <p>Pesquisar</p>
+                    <input type="text" placeholder="Pesquisar" />
                 </div>
 
                 <div class="menus">

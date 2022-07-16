@@ -1,4 +1,15 @@
+import Perfil from "./Components/Perfil";
+import SugestaoLinha from "./Components/SugestaoLinha";
+
 export default function Sidebar() {
+
+    const perfil =  {img:'./assets/img/A_Pixar.jpg', user:'pixar_real.oficial', name:'Pixar'};
+    
+    const itens = [ {img:'./assets/img/B_Marvel.jpg', user:'marvete322', status:'Segue você'},
+                    {img:'./assets/img/C_WarnerBros.png', user:'warner_bros', status:'Segue você'},
+                    {img:'./assets/img/D_LucasFilm.png', user:'luck_imyourfather', status:'Segue você'},
+                    {img:'./assets/img/E_Disney.png', user:'wdw42', status:'Segue você'},
+                    {img:'./assets/img/F_Universal.jpg', user:'universalmovies', status:'Segue você'},];
 
     return (
 
@@ -6,13 +17,7 @@ export default function Sidebar() {
 
             <div class="barra-lateral">
 
-                <div class="perfil">
-                    <img src="./assets/img/A_Pixar.jpg" alt="" />
-                    <div>
-                        <h1>pixar_real.oficial</h1>
-                        <h2>Pixar</h2>
-                    </div>
-                </div>
+                {Perfil(perfil)}
 
                 <div class="sugestao">
 
@@ -21,63 +26,8 @@ export default function Sidebar() {
                         <h2>Ver tudo</h2>
                     </div>
 
-                    <div class="sugestao-linha">
-                        <div>
-                            <img src="./assets/img/B_Marvel.jpg" alt="" />
-                            <div>
-                                <h1>marvete322</h1>
-                                <h2>Segue você</h2>
-                            </div>
-                        </div>
-                        <p>Seguir</p>
-                    </div>
+                    {itens.map(SugestaoLinha)}
 
-                    <div class="sugestao-linha">
-                        <div>
-                            <img src="./assets/img/C_WarnerBros.png" alt="" />
-                            <div>
-                                <h1>warner_bros</h1>
-                                <h2>Segue você</h2>
-                            </div>
-                        </div>
-                        <p>Seguir</p>
-
-                    </div>
-
-                    <div class="sugestao-linha">
-                        <div>
-                            <img src="./assets/img/D_LucasFilm.png" alt="" />
-                            <div>
-                                <h1>luck_imyourfather</h1>
-                                <h2>Novo no Instagram</h2>
-                            </div>
-                        </div>
-                        <p>Seguir</p>
-
-                    </div>
-
-                    <div class="sugestao-linha">
-                        <div>
-                            <img src="./assets/img/E_Disney.png" alt="" />
-                            <div>
-                                <h1>wdw</h1>
-                                <h2>Segue você</h2>
-                            </div>
-                        </div>
-                        <p>Seguir</p>
-
-                    </div>
-
-                    <div class="sugestao-linha">
-                        <div>
-                            <img src="./assets/img/F_Universal.jpg" alt="" />
-                            <div>
-                                <h1>universalmovies</h1>
-                                <h2>Segue você</h2>
-                            </div>
-                        </div>
-                        <p>Seguir</p>
-                    </div>
                 </div>
 
                 <div class="info">

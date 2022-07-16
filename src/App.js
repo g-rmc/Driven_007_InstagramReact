@@ -1,6 +1,6 @@
 import Head from './Head';
 import Body from './Body';
-import BottomMobile from './Body';
+import BottomMobile from './BottomMobile';
 
 export default function App() {
 
