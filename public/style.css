@@ -203,6 +203,10 @@ strong {
     border-radius: 50%;
 }
 
+.post-conteudo {
+    width: 100%;
+}
+
 .post-foto, .post-video {
     height: auto;
     width: 100%;
