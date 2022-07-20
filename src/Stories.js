@@ -10,19 +10,24 @@ export default function Stories() {
                         {img:'./assets/img/8_BnL.jpg', user:'BnL'}
     ];
 
+    function Story({img, user}) {
+
+        return (
+            <div className="story">
+                <img src="./assets/img/stories_background.jpg" alt=""/>
+                <img src={img} alt=""/>
+                <p>{user}</p>
+            </div>
+        )
+    }
+
     return (
 
-        <div class="stories">
+        <div className="stories">
 
-            {stories.map(props => (
-                <div class="story">
-                    <img src="./assets/img/stories_background.jpg" />
-                    <img src={props.img} />
-                    <p>{props.user}</p>
-                </div>
-            ))}
+            {stories.map((story, index) => <Story key = {index} img = {story.img} user = {story.user}/>)}
 
-            <div class="botao">
+            <div className="botao">
                 <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>
 

@@ -9,45 +9,55 @@ export default function Sidebar() {
                     {img:'./assets/img/F_Universal.jpg', user:'universalmovies', status:'Segue você'}
     ];
 
+    function Perfil ({img, user, name}) {
+
+        return (
+            <div className="perfil">
+            <img src={img} alt="" />
+            <div>
+                <h1>{user}</h1>
+                <h2>{name}</h2>
+            </div>
+        </div>
+        )
+    }
+
+    function Sugestao ({img, user, status}) {
+
+        return (
+            <div className="sugestao-linha">
+            <div>
+                <img src={img} alt="" />
+                <div>
+                    <h1>{user}</h1>
+                    <h2>{status}</h2>
+                </div>
+            </div>
+            <p>Seguir</p>
+        </div>
+        )
+    }
+
     return (
 
-        <div class="container">
+        <div className="container">
 
-            <div class="barra-lateral">
+            <div className="barra-lateral">
 
-                {perfil.map(props => (
-                    <div class="perfil">
-                        <img src={props.img} alt="" />
-                        <div>
-                            <h1>{props.user}</h1>
-                            <h2>{props.name}</h2>
-                        </div>
-                    </div>
-                ))}
+                {perfil.map((perfil, index) => <Perfil key = {index} img = {perfil.img} user = {perfil.user} name = {perfil.name}/>)}
 
-                <div class="sugestao">
+                <div className="sugestao">
 
-                    <div class="sugestao-topo">
+                    <div className="sugestao-topo">
                         <h1>Sugestões para você</h1>
                         <h2>Ver tudo</h2>
                     </div>
 
-                    {itens.map(props => (
-                        <div class="sugestao-linha">
-                            <div>
-                                <img src={props.img} alt="" />
-                                <div>
-                                    <h1>{props.user}</h1>
-                                    <h2>{props.status}</h2>
-                                </div>
-                            </div>
-                            <p>Seguir</p>
-                        </div>
-                    ))}
+                    {itens.map((perfil, index) => <Sugestao key = {index} img = {perfil.img} user = {perfil.user} status = {perfil.status}/>)}
 
                 </div>
 
-                <div class="info">
+                <div className="info">
                     <p>
                         Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes • Hashtags • Idioma
                         <br />

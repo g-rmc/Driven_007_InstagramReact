@@ -9,8 +9,8 @@ export default function App() {
     return (
         <div>
             <Head />
-            <div class="conteudo">
-                <div class="feed">
+            <div className="conteudo">
+                <div className="feed">
                     <Stories />
                     <Posts />
                 </div>

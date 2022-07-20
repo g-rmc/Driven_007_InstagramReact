@@ -2,7 +2,7 @@ export default function BottomMobile() {
 
     return (
         
-        <div class="base mobile">
+        <div className="base mobile">
             <ion-icon name="home"></ion-icon>
             <ion-icon name="search-outline"></ion-icon>
             <ion-icon name="add-circle-outline"></ion-icon>
